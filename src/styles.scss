@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+html,body {
+    height: 100%;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Abel";
+    src: local("Abel"), url(./assets/fonts/Abel/Abel-Regular.ttf) format("truetype");
+}
