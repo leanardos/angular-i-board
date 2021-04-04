@@ -12,14 +12,23 @@
 }
 
 .tab-item {
-    margin: .5rem;
     height: 3.5rem;
     width: 3.5rem;
+
+    margin: 5px;
     border-radius: 5px;
     
-    -webkit-transition: margin 0.2s ease-in-out;
-    -moz-transition: margin 0.2s ease-out;
-    -o-transition: margin 0.2s ease-out;
+    transition: all 0.2s;
+
+    color: beige;
+
+}
+
+.tab-container {
+    &:not(:last-child)
+    {
+        margin-right: 5px;
+    }
 }
 
 .tab-icon {
@@ -27,33 +36,20 @@
     margin: 10px;
 }
 
-.tab-item:hover {
-    margin-bottom: 25px;
-    cursor: pointer;
+.tab-item.selected {
+    transform: translateY(-20px);
+
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 2.275);
 }
 
 .bookmarks {
-    // background-color: #2196f3;
     background: radial-gradient(circle, rgba(63,212,251,1) 0%, rgba(70,141,252,1) 100%);
-
-    //background-color: rgba(66, 66, 66, 0.575);
-    color: beige;
 }
 
 .todos {
-    // background-color: wheat;
-    
-    // background-color: rgba(66, 66, 66, 0.575);
     background: radial-gradient(circle, rgba(239,63,251,1) 0%, rgba(70,89,252,0.8130602582830007) 100%);
-
-    color: beige;
 }
 
 .notes {
-    //background-color: #f44336;
-    
-    // background-color: rgba(66, 66, 66, 0.575);
     background: radial-gradient(circle, rgba(208,231,149,1) 0%, rgba(73,227,33,1) 100%);
-
-    color: beige;
 }
