@@ -1,0 +1,59 @@
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ffffff91;
+    width: fit-content;
+    height: 60px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tab-item {
+    margin: .5rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 5px;
+    
+    -webkit-transition: margin 0.2s ease-in-out;
+    -moz-transition: margin 0.2s ease-out;
+    -o-transition: margin 0.2s ease-out;
+}
+
+.tab-icon {
+    font-size: 35px;
+    margin: 10px;
+}
+
+.tab-item:hover {
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.bookmarks {
+    // background-color: #2196f3;
+    background: radial-gradient(circle, rgba(63,212,251,1) 0%, rgba(70,141,252,1) 100%);
+
+    //background-color: rgba(66, 66, 66, 0.575);
+    color: beige;
+}
+
+.todos {
+    // background-color: wheat;
+    
+    // background-color: rgba(66, 66, 66, 0.575);
+    background: radial-gradient(circle, rgba(239,63,251,1) 0%, rgba(70,89,252,0.8130602582830007) 100%);
+
+    color: beige;
+}
+
+.notes {
+    //background-color: #f44336;
+    
+    // background-color: rgba(66, 66, 66, 0.575);
+    background: radial-gradient(circle, rgba(208,231,149,1) 0%, rgba(73,227,33,1) 100%);
+
+    color: beige;
+}
