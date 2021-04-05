@@ -6,7 +6,6 @@ import { TodosComponent } from './todos/todos.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'bookmarks', pathMatch: 'full'},
   { path: 'bookmarks', component: BookmarksComponent },
   { path: 'todos', component: TodosComponent },
   { path: 'notes', component: NotesComponent },
