@@ -4,14 +4,34 @@
     justify-content: center;
     align-items: center;
 
-    background-color: rgba(0, 0, 0, 0.486);
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100px;
     height: 100px;
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    &:active {
+        transform: translateY(5px);
+    }
 }
 
+
 .item-text {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+
+    max-width: 80%;
+    
     color: white;
+    white-space: nowrap;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .item img {
