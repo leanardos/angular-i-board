@@ -1,0 +1,19 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.486);
+    width: 100px;
+    height: 100px;
+}
+
+.item-text {
+    margin-bottom: 5px;
+    color: white;
+}
+
+.item img {
+    max-width: 32px;
+}
