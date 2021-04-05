@@ -1,0 +1,28 @@
+.bookmarks-wrapper {
+    height: 100%;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 35rem;
+    gap: 5px;
+    margin: auto;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.486);
+    width: 100px;
+    height: 100px;
+}
+
+.item img {
+    max-width: 32px;
+}
