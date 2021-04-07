@@ -12,3 +12,16 @@ html,body {
     font-family: "Abel";
     src: local("Abel"), url(./assets/fonts/Abel/Abel-Regular.ttf) format("truetype");
 }
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    height: 50vh;
+    max-width: 35rem;
+    gap: 5px;
+    margin: auto;
+}

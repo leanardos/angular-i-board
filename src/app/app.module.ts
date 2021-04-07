@@ -6,6 +6,7 @@ import { BookmarkItemComponent } from './bookmarks/bookmark-item/bookmark-item.c
 import { BookmarksComponent } from './bookmarks/bookmarks.component';
 import { NotesComponent } from './notes/notes.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { TodoItemComponent } from './todos/todo-item/todo-item.component';
 import { TodosComponent } from './todos/todos.component';
 
 
@@ -16,7 +17,8 @@ import { TodosComponent } from './todos/todos.component';
     BookmarksComponent,
     BookmarkItemComponent,
     TodosComponent,
-    NotesComponent
+    NotesComponent,
+    TodoItemComponent
   ],
   imports: [
     BrowserModule,
