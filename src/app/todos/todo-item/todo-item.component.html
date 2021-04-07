@@ -1,0 +1,10 @@
+<div class="todo-item">
+    <div class="check">
+        <ng-container *ngIf="completed" > 
+            <i class="material-icons-outlined todo-icon">
+                done
+            </i>
+        </ng-container>
+    </div>
+    <p class="todo-text">{{todoText}}</p>
+</div>
