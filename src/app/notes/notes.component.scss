@@ -1,0 +1,20 @@
+.container {
+    flex-direction: column;
+}
+
+.add-btn {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.808);
+    padding: 10px 20px;
+    cursor: pointer;
+    
+    &-text {
+        color: white;
+        margin: 0;
+    }
+}
+
+.notes-icon {
+    color: white;
+    font-size: 20px;
+}
