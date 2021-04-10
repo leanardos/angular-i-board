@@ -9,6 +9,7 @@ import { NotesComponent } from './notes/notes.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { TodoItemComponent } from './todos/todo-item/todo-item.component';
 import { TodosComponent } from './todos/todos.component';
+import { AddButtonComponent } from './shared/add-button/add-button.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { TodosComponent } from './todos/todos.component';
     TodosComponent,
     NotesComponent,
     TodoItemComponent,
-    NoteItemComponent
+    NoteItemComponent,
+    AddButtonComponent
   ],
   imports: [
     BrowserModule,

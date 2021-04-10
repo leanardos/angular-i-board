@@ -1,9 +1,17 @@
 .bookmarks-wrapper {
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+}
 
+.item-container {
+    display: flex;
+    gap: 5px;
+}
 
 .item {
     display: flex;
