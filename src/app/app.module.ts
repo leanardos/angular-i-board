@@ -3,6 +3,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgScrollbarModule } from 'ngx-scrollbar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookmarkItemComponent } from './bookmarks/bookmark-item/bookmark-item.component';
@@ -31,7 +32,8 @@ import { TodosComponent } from './todos/todos.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    NgScrollbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

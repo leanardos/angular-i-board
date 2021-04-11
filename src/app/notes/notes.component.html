@@ -1,10 +1,12 @@
 <div class="notes-wrapper">
     <div class="container">
-        <div class="item-container">
-            <ng-container *ngFor="let note of notes">
-                <app-note-item [noteText]="note.noteText"></app-note-item>
-            </ng-container>
-        </div>
+        <ng-scrollbar #scrollable track="all" pointerEventsMethod="scrollbar">
+            <div class="item-container">
+                <ng-container *ngFor="let note of notes">
+                    <app-note-item [noteText]="note.noteText"></app-note-item>
+                </ng-container>
+            </div>
+        </ng-scrollbar>
         <app-add-button (onClick)="onAddClicked()"></app-add-button>
     </div>
 </div>
