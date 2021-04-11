@@ -7,13 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TodoItemComponent implements OnInit {
 
-  @Input() todoText: string;
-  @Input() completed: boolean;
+    @Input() todoText: string;
+    @Input() completed: boolean;
 
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit(): void {
-  }
-
+    ngOnInit(): void {
+    }
 }
