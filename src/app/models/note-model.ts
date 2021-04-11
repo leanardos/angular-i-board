@@ -1,3 +1,4 @@
 export class Note {
-    noteText: string;
+    constructor(public noteText: string) {
+    }
 }

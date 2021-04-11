@@ -1,8 +1,10 @@
 <div class="notes-wrapper">
     <div class="container">
-        <app-note-item noteText="Hellooo this is my super note"></app-note-item>
-        <app-note-item noteText="My another long note will come to here yellooo this is my super note"></app-note-item>
-
-        <app-add-button></app-add-button>
+        <div class="item-container">
+            <ng-container *ngFor="let note of notes">
+                <app-note-item [noteText]="note.noteText"></app-note-item>
+            </ng-container>
+        </div>
+        <app-add-button (onClick)="onAddClicked()"></app-add-button>
     </div>
 </div>
