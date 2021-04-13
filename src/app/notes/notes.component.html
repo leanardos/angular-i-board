@@ -1,7 +1,7 @@
 <div class="notes-wrapper">
     <div class="container">
         <ng-scrollbar #scrollable track="all" pointerEventsMethod="scrollbar">
-            <div class="item-container">
+            <div class="scroll-container">
                 <ng-container *ngFor="let note of notes">
                     <app-note-item [noteText]="note.noteText"></app-note-item>
                 </ng-container>

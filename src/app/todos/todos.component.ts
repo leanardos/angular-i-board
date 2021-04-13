@@ -11,4 +11,9 @@ export class TodosComponent implements OnInit {
     ngOnInit(): void {
     }
 
+
+    onAddClicked()
+    {
+        console.log("add clicked");
+    }
 }

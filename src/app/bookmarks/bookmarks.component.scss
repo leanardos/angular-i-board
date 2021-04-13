@@ -3,26 +3,6 @@
     overflow-y: auto;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-}
-
-.item-container {
-    display: flex;
-    gap: 5px;
-}
-
-.item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: rgba(0, 0, 0, 0.486);
-    width: 100px;
-    height: 100px;
-}
-
 .item img {
     max-width: 32px;
 }
