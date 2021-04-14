@@ -2,12 +2,12 @@
     <div class="container">
         <ng-scrollbar #scrollable track="all" pointerEventsMethod="scrollbar">
             <div class="scroll-container">
-                <app-bookmark-item iconUrl="http://wikipedia.org/favicon.ico" iconText="Wikipedia"></app-bookmark-item>
-                <app-bookmark-item iconUrl="http://google.com/favicon.ico" iconText="Lorem ipsum dolar sit amet consectetur"></app-bookmark-item>
-                <app-bookmark-item iconUrl="http://yahoo.com/favicon.ico" iconText="Yahoo"></app-bookmark-item>
+                <ng-container *ngFor="let bookmark of bookmarks">
+                    <app-bookmark-item [url]="bookmark.url" [name]="bookmark.name"></app-bookmark-item>
+                </ng-container>
             </div>
         </ng-scrollbar>
 
-        <app-add-button></app-add-button>
+        <app-add-button (addButtonClickEmitter)="onAddClicked()"></app-add-button>
     </div>
 </div>

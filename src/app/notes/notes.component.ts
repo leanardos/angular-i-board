@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Note } from '../models/note-model';
+import { Note } from '../models/note';
 
 @Component({
     selector: 'app-notes',
@@ -20,8 +20,8 @@ export class NotesComponent implements OnInit {
 
     onAddClicked()
     {
-        this.notes.push(new Note("asd"))
-        console.log(this.notes)
+        this.notes.push(new Note('asd'));
+        console.log(this.notes);
     }
 
 }

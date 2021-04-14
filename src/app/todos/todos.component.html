@@ -2,11 +2,11 @@
     <div class="container">
         <ng-scrollbar #scrollable track="all" pointerEventsMethod="scrollbar">
             <div class="scroll-container">
-                <app-todo-item completed="true" todoText="Do the email templates"></app-todo-item>
-                <app-todo-item todoText="Lorem ipsum if I have to ever music song then forsert ipsum if I have to ever music song then forsert"></app-todo-item>
-                <app-todo-item todoText="Do the email templates"></app-todo-item>
+                <ng-container *ngFor="let todo of todos">
+                    <app-todo-item [completed]="todo.isCompleted" [todoText]="todo.text"></app-todo-item>
+                </ng-container>
             </div>
         </ng-scrollbar>
-        <app-add-button (onClick)="onAddClicked()"></app-add-button>
+        <app-add-button (addButtonClickEmitter)="onAddClicked()"></app-add-button>
     </div>
 </div>
