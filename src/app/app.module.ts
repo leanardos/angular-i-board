@@ -1,5 +1,8 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,9 +14,12 @@ import { BookmarksComponent } from './bookmarks/bookmarks.component';
 import { NoteItemComponent } from './notes/note-item/note-item.component';
 import { NotesComponent } from './notes/notes.component';
 import { AddButtonComponent } from './shared/add-button/add-button.component';
+import { AddDialogComponent } from './shared/add-dialog/add-dialog.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { TodoItemComponent } from './todos/todo-item/todo-item.component';
 import { TodosComponent } from './todos/todos.component';
+
+
 
 @NgModule({
   declarations: [
@@ -25,7 +31,8 @@ import { TodosComponent } from './todos/todos.component';
     NotesComponent,
     TodoItemComponent,
     NoteItemComponent,
-    AddButtonComponent
+    AddButtonComponent,
+    AddDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -33,9 +40,16 @@ import { TodosComponent } from './todos/todos.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
-    NgScrollbarModule
+    NgScrollbarModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AddDialogComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

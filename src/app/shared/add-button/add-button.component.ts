@@ -1,5 +1,4 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-
 @Component({
     selector: 'app-add-button',
     templateUrl: './add-button.component.html',
@@ -7,7 +6,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class AddButtonComponent implements OnInit {
 
-    @Output() addButtonClickEmitter = new EventEmitter();
+    @Output() addClick = new EventEmitter();
 
     constructor() { }
 
@@ -17,6 +16,6 @@ export class AddButtonComponent implements OnInit {
 
     onAddButtonClick()
     {
-        this.addButtonClickEmitter.emit();
+        this.addClick.emit();
     }
 }
