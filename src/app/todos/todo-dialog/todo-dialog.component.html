@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Todo</h1>
+
+<mat-dialog-content>
+    <mat-form-field>
+        <input matInput placeholder="Task" [(ngModel)]="data.text">
+    </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button (click)="close()">Close</button>
+    <button class="mat-raised-button mat-primary" (click)="save()">Save</button>
+</mat-dialog-actions>

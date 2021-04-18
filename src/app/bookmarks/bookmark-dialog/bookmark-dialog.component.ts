@@ -9,14 +9,11 @@ import { Bookmark } from 'src/app/models/bookmark';
 })
 export class BookmarkDialogComponent implements OnInit {
 
-    // formGroup: FormGroup;
     bookmark: Bookmark;
 
-    constructor(
-        private dialogRef: MatDialogRef<BookmarkDialogComponent>,
+    constructor(private dialogRef: MatDialogRef<BookmarkDialogComponent>,
         @Inject(MAT_DIALOG_DATA) public data: Bookmark)
     {
-
         this.bookmark = data;
     }
 
@@ -24,12 +21,13 @@ export class BookmarkDialogComponent implements OnInit {
     {
     }
 
-    save() {
+    save()
+    {
         this.dialogRef.close(this.bookmark);
     }
 
-    close() {
+    close()
+    {
         this.dialogRef.close();
     }
-
 }

@@ -18,6 +18,7 @@ import { NotesComponent } from './notes/notes.component';
 import { AddButtonComponent } from './shared/add-button/add-button.component';
 import { AddDialogComponent } from './shared/add-dialog/add-dialog.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { TodoDialogComponent } from './todos/todo-dialog/todo-dialog.component';
 import { TodoItemComponent } from './todos/todo-item/todo-item.component';
 import { TodosComponent } from './todos/todos.component';
 
@@ -35,7 +36,8 @@ import { TodosComponent } from './todos/todos.component';
     NoteItemComponent,
     AddButtonComponent,
     AddDialogComponent,
-    BookmarkDialogComponent
+    BookmarkDialogComponent,
+    TodoDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,11 @@ import { TodosComponent } from './todos/todos.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [AddDialogComponent, BookmarkDialogComponent],
+  entryComponents: [
+    TodoDialogComponent, 
+    AddDialogComponent,
+    BookmarkDialogComponent
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

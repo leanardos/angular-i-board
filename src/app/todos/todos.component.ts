@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { Todo } from '../models/todo';
-import { AddDialogComponent } from './../shared/add-dialog/add-dialog.component';
+import { TodoDialogComponent } from './todo-dialog/todo-dialog.component';
+
 @Component({
     selector: 'app-todos',
     templateUrl: './todos.component.html',
@@ -10,6 +11,7 @@ import { AddDialogComponent } from './../shared/add-dialog/add-dialog.component'
 export class TodosComponent implements OnInit {
 
     todos: Todo[];
+    newTodo: Todo;
 
     constructor(private dialog: MatDialog) { }
 
@@ -18,26 +20,22 @@ export class TodosComponent implements OnInit {
         this.todos = new Array<Todo>();
     }
 
-    openDialog() {
-        const dialogConfig = new MatDialogConfig();
-        
-        dialogConfig.autoFocus = true;
-        dialogConfig.hasBackdrop = true;
-
-        dialogConfig.data = {
-            id: 1,
-            title: 'Angular For Beginners'
-        };
-    
-        const dialogRef = this.dialog.open(AddDialogComponent, dialogConfig);
-
-        dialogRef.afterClosed().subscribe(
-            data => console.log("Dialog output:", data)
-        );    
-    }
-
-    onAddClicked()
+    openDialog()
     {
-        this.todos.push(new Todo('Do 15 min meditaion', false));
+        const dialogRef = this.dialog.open(TodoDialogComponent, {
+            width: '250px',
+            data: {
+                text: this.newTodo?.text
+            }
+        });
+
+        dialogRef.afterClosed()
+            .subscribe(data =>
+            {
+                if (data)
+                {
+                    this.todos.push(new Todo(data.text, false));
+                }
+            });    
     }
 }

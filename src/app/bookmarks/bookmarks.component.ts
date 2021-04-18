@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { Bookmark } from '../models/bookmark';
 import { BookmarkDialogComponent } from './bookmark-dialog/bookmark-dialog.component';
 @Component({
@@ -18,12 +18,8 @@ export class BookmarksComponent implements OnInit {
         this.bookmarks = new Array<Bookmark>();
     }
 
-    openDialog() {
-        const dialogConfig = new MatDialogConfig();
-        
-        dialogConfig.autoFocus = true;
-        dialogConfig.hasBackdrop = true;
-
+    openDialog()
+    {
         const dialogRef = this.dialog.open(BookmarkDialogComponent, {
             width: '250px',
             data: {
@@ -32,13 +28,13 @@ export class BookmarksComponent implements OnInit {
             }
           });
 
-        dialogRef.afterClosed().subscribe(
-            data => this.bookmarks.push(data)
-        );    
-    }
-
-    onAddClicked()
-    {
-        this.bookmarks.push(new Bookmark('google.com', 'Google'));
+        dialogRef.afterClosed()
+            .subscribe(data => 
+            {
+                if (data)
+                {
+                    this.bookmarks.push(data);
+                }
+            });    
     }
 }
