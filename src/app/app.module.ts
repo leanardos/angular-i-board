@@ -1,14 +1,16 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BookmarkDialogComponent } from './bookmarks/bookmark-dialog/bookmark-dialog.component';
 import { BookmarkItemComponent } from './bookmarks/bookmark-item/bookmark-item.component';
 import { BookmarksComponent } from './bookmarks/bookmarks.component';
 import { NoteItemComponent } from './notes/note-item/note-item.component';
@@ -32,7 +34,8 @@ import { TodosComponent } from './todos/todos.component';
     TodoItemComponent,
     NoteItemComponent,
     AddButtonComponent,
-    AddDialogComponent
+    AddDialogComponent,
+    BookmarkDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -43,13 +46,13 @@ import { TodosComponent } from './todos/todos.component';
     NgScrollbarModule,
     MatDialogModule,
     ReactiveFormsModule,
+    MatInputModule,
     MatFormFieldModule,
-
-
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [AddDialogComponent],
+  entryComponents: [AddDialogComponent, BookmarkDialogComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

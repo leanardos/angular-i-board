@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Bookmark</h1>
+
+<mat-dialog-content>
+    <mat-form-field>
+        <input matInput placeholder="Name" [(ngModel)]="data.name">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Url" [(ngModel)]="data.url">
+    </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button class="mat-raised-button"(click)="close()">Close</button>
+    <button class="mat-raised-button mat-primary"(click)="save()">Save</button>
+</mat-dialog-actions>
